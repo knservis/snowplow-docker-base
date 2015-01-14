@@ -28,6 +28,7 @@ One easy way to run it is to create a new Docker file which will contain:
 
     FROM knservis/snowplow-base:0.9.13
     WORKDIR /app/snowplow/2-collectors/scala-stream-collector/
+    EXPOSE 80
     ADD ./collector.conf /app/snowplow/2-collectors/scala-stream-collector/
     CMD target/scala-2.10/snowplow-stream-collector-0.2.0 --config ./collector.conf
 
